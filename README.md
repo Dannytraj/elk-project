@@ -20,9 +20,9 @@ https://github.com/Dannytraj/elk-project/tree/main/Ansible%20Playbook
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly *available*, in addition to restricting _access_ to the network.
+Load balancing ensures that the application will be highly **available**, in addition to restricting __access__ to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box? Load balancers protect the network from DDoS attacks by re-routing traffic. The advantage of a jump box is it gives users access to a single enrty point which is easy to secure and monitor.
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **network** and system **logs**.
 - _TODO: What does Filebeat watch for? It monitores for any system changes and logs those changes.
 - _TODO: What does Metricbeat record? It records metrics and statistics and can be shipped to specified outputs.
 
@@ -40,29 +40,33 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the **JumpBox** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _TODO: Add whitelisted IP addresses **104.210.95.194**
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by through the JumpBox via **SSH**.
+- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?The JumpBox VM: IP 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 |   104.210.95.194     |
+| Web 1    | No                  |                      |
+| Web 2    | No                  |                      |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- _TODO: What is the main advantage of automating configuration with Ansible?
+The advantage is that you can run commands to multiple servers from the one playbook
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+* Install: docker.io
+* Install: python-pip
+* Install: docker module
+* Command: sysctl -w vm.max_map_count=262144
+* Launch docker container: elk
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
