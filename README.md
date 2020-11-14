@@ -3,7 +3,7 @@
 The files in this repository were used to configure the network depicted below.
 
 ![RedTeam Cloud Server](https://github.com/Dannytraj/elk-project/blob/main/RedTeam%20Cloud%20Server.png)
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __yml__ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __.yml__ file may be used to install only certain pieces of it, such as Filebeat.
 
 https://github.com/Dannytraj/elk-project/tree/main/Ansible%20Playbook
   
