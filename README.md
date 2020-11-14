@@ -20,22 +20,21 @@ https://github.com/Dannytraj/elk-project/tree/main/Ansible%20Playbook
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-
+Load balancing ensures that the application will be highly *available*, in addition to restricting _access_ to the network.
+- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box? Load balancers protect the network from DDoS attacks by re-routing traffic. The advantage of a jump box is it gives users access to a single enrty point which is easy to secure and monitor.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- _TODO: What does Filebeat watch for? It monitores for any system changes and logs those changes.
+- _TODO: What does Metricbeat record? It records metrics and statistics and can be shipped to specified outputs.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web 1    | Webserver| 10.0.0.5   | Linux            |
+| Web 2    | Webserver| 10.0.0.6   | Linux            |
+| ElkServer| Elkstack | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
